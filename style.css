@@ -73,11 +73,17 @@ body {
     width: 100%;
 }
 
-/* fills half the content wrapper
+/* fills 40% of the content wrapper with the menu
     which makes having two columns in one row easier */
-.column {
-    width: 50%;
+.column-1 {
+    width: 40%;
     float:left;
+}
+
+/* fills 60% of the content wrapper with the spaceship details */
+.column-2 {
+    width: 60%;
+    float: left;
 }
 
 /* Starships holds list of first 10 starships
@@ -106,6 +112,33 @@ body {
     padding-left: 20px;
 }
 
+/* button-container contains pagination buttons
+    It's pretty much similar with container */
+.button-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    position: relative;
+    top:25%;
+    padding-top: 10px;
+
+    /* Puts all the contents in one line and evenly space
+        This makes it suitable for dynamic elements */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* buttons which will be added dynamically 
+    padding and border radius to make it round and nice
+    use pointer cursor to indicate its functionality as a button */
+.button {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 /* Simple responsive functionality */
 @media only screen and (max-width: 860px) {
 /* Wrap the container in mobile phones */
@@ -114,9 +147,13 @@ body {
     width: 75%;
 }
 
+.button-container {
+    top: 10%;
+}
+
 /* make the 2 column format into one column 
     and add vertical scroll */
-.column {
+.column-1, .column-2 {
     width: 100%;
 }
 }
