@@ -1,0 +1,122 @@
+/* Starwars font */
+@font-face {
+    font-family: 'swfont';
+    src: url('fonts/Starjedi.ttf')
+}
+
+/* Override default style of browser */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* All paragraphs and list items have
+    sans-serif font, which is better than default
+    10px bottom margin to make it easier to read
+*/
+p, li {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Big headers custom style, applying star wars font */
+h1 {
+    font-family: 'swfont';
+    margin-bottom: 15px;
+    font-weight: 100;
+    font-size: 2.2rem;
+}
+
+/* Static background which snaps to page and zooms accordingly
+    no matter how big or small it is */
+body {
+    background-image: url('images/dwbg.jpg') ;
+    
+    /* use all viewport height to cover backgroun */
+    height: 100vh;
+    
+    /* Stretch background to screen without messing up the ratio */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    /* snap background to screen, for conditions that the content is bigger than screen */
+    background-attachment: fixed;
+}
+
+/* The transulent box which the content is shown in
+    It's in middle of the page */
+.container {
+    /* Fills half the page */
+    width: 50%;
+    
+    /* Is in middle of the page */
+    margin-left: auto;
+    margin-right:auto;
+
+    position: relative;
+    /* Because the content fills it, its relative position should be less that 50 */
+    top: 25%;
+
+    /* Makes it grow as the content grows */
+    overflow-y: auto;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 25px;
+
+    padding: 20px;
+}
+
+/* contains two columns of data */
+.content {
+    width: 100%;
+}
+
+/* fills half the content wrapper
+    which makes having two columns in one row easier */
+.column {
+    width: 50%;
+    float:left;
+}
+
+/* Starships holds list of first 10 starships
+    which are retrieved from swapi.dev */
+#starships {
+    list-style-type: none;
+}
+
+/* Offset the starship names
+    use pointer cursor to indicate its functionality */
+#starships li {
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+/* name is the name of selected starship
+    its siblings hold the information of that starship
+    this gives a nice offset to them */
+#name ~ p {
+    padding-left: 20px;
+}
+
+/* films contains paragaraphs of film titles
+    that ship is in */
+#films p {
+    padding-left: 20px;
+}
+
+/* Simple responsive functionality */
+@media only screen and (max-width: 860px) {
+/* Wrap the container in mobile phones */
+.container {
+    top: 10%;
+    width: 75%;
+}
+
+/* make the 2 column format into one column 
+    and add vertical scroll */
+.column {
+    width: 100%;
+}
+}

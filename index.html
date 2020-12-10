@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom styles file -->
+    <link rel="stylesheet" href="style.css">
+    <title>Starwars Ships</title>
+</head>
+<body>
+    <!-- Data container -->
+    <div class="container">
+        <!-- Data Content Wrapper: Menu and Details -->
+        <div class="content">
+            <!-- Column 1 : Menu -->
+            <div class="column">
+                <h1>starships</h1>
+                <!-- Contains a list of all starships -->
+                <ul id = "starships">
+                    <!-- This part fills as the page loads -->
+                </ul>
+            </div>
+            <!-- Column 2 : Starship details -->
+            <div class="column">
+                <!-- Name of the chosen starship -->
+                <h1 id = "name">name</h1>
+                <p>
+                    MODEL:
+                    <span id = "model">
+                        <!-- Fills with API calls according to click -->
+                    </span>
+                </p>
+                <p>
+                    MANUFACTURER:
+                    <span id = "manufacturer">
+                        <!-- Fills with API calls according to click -->
+                    </span>
+                </p>
+                <p>
+                    CREW:
+                    <span id = "crew">
+                        <!-- Fills with API calls according to click -->
+                    </span>
+                </p>
+                <p>
+                    PASSENGERS:
+                    <span id = "passengers">
+                        <!-- Fills with API calls according to click -->
+                    </span>
+                </p>
+                <p>
+                    FILMS:
+                    <span id = "films">
+                        <!-- Fills with API calls according to click -->
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Custome script -->
+    <script src="app.js"></script>
+</body>
+</html>
